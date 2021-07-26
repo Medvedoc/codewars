@@ -13,14 +13,10 @@
 
 ```
 ├── 8-kyu/
-│   ├── Name Kata
-│   │   ├── index.js
-│   │   ├── readme.md
+│   ├── Name Kata.js
 │   └── ...
 │
 ├── 7-kyu/
-│   ├── Name Kata
-│   │   ├── index.js
-│   │   ├── readme.md
+│   ├── Name Kata.js
 │   └── ...
 ```
