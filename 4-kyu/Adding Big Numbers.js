@@ -2,20 +2,17 @@
 
 // 4kyu - Adding Big Numbers
 
-// https://www.codewars.com/kata/525f4206b73515bffb000b21/train/javascript
+// https://www.codewars.com/kata/525f4206b73515bffb000b21
 
 function add(a,b) {
-    const [stra, strb] = [a, b].map((el) => el.split('').reverse().join(''));
-    const len = a.length > b.length ? a.length : b.length;
-    const result = [];
-    let rest = 0;
-    for (let i = 0; i < len; i++) {
-        const sum = (+stra[i] || 0) + (+strb[i] || 0) + rest;
-        rest = sum > 9 ? Math.floor(sum / 10) : 0;
-        result.push(sum % 10);
+    let [a_str, b_str] = [a, b].map((e) => e.split('').reverse().join(''))
+    let number = 0
+    let result = []
+    for (let i = 0; i < (a.length > b.length ? a.length : b.length); i++) {
+        let sum = ((+a_str[i] || 0) + (+b_str[i] || 0) + number)
+        number = sum > 9 ? Math.floor(sum / 10) : 0
+        result.push(sum % 10)
     }
-    if (rest !== 0) {
-        result.push(rest);
-    }
-    return result.reverse().join('');
-};
+    if (number !== 0) result.push(number)
+    return result.reverse().join('')
+}
